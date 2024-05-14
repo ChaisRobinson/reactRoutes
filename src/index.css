@@ -11,3 +11,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Navbar.css */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+
+  padding: 1rem;
+}
+
+.navbar-brand a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-collapse {
+    background-color: #333;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .navbar-collapse.show {
+    height: auto;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+}
